@@ -2,12 +2,11 @@
     "manifest_version": 3,
     "name": "YTFocus",
     "version": "0.1.0",
-    "permissions": ["storage"],
+    "permissions": ["storage", "tabs"],
     "background": {
-        "scripts": ["build/background.js"],
-        "persistent": false
+        "service_worker": "build/background.js"
     },
-    "browser_action": {
+    "action": {
         "default_popup": "index.html"
     },
     "content_scripts": [
